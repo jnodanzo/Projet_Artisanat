@@ -1,7 +1,7 @@
 <?php
 // Configuration de la base de données
 class Database {
-    private $host = 'localhost';
+    private $host = 'sql303.infinityfree.com';
     private $db_name = 'if0_39621712_database';
     private $username = 'if0_39621712';
     private $password = 'ziondanzo123';
