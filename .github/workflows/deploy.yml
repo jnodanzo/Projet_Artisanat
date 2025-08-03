@@ -1,10 +1,8 @@
-name: Deploy to InfinityFree via FTP
-
 on:
   push:
     branches:
       - main
-  workflow_dispatch: # Permet un déclenchement manuel si besoin
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -21,9 +19,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          server-dir: ${{ secrets.FTP_PATH }}
-          local-dir: ./  # Déploie tout le projet
+          server-dir: /htdocs/
+          local-dir: ./  # Déploie tout le contenu de la racine
           exclude: |
             */.git
             */.github
-            **/README.md
+            **/README.md 
